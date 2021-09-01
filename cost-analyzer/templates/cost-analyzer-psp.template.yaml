@@ -4,6 +4,7 @@ apiVersion: {{ include "cost-analyzer.podSecurityPolicy.apiVersion" . }}
 kind: PodSecurityPolicy
 metadata:
     name: {{ template "cost-analyzer.fullname" . }}-psp
+    namespace: {{ .Release.Namespace }}
 spec:
     privileged: false
     seLinux:

@@ -132,6 +132,7 @@ global:
   podAnnotations: {}
     # iam.amazonaws.com/role: role-arn
   additionalLabels: {}
+  extraLabels: {}
 
 # generated at http://kubecost.com/install, used for alerts tracking and free trials
 kubecostToken: # ""

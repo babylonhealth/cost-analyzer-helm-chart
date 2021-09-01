@@ -104,6 +104,7 @@ helm.sh/chart: {{ include "cost-analyzer.chart" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 app: cost-analyzer
+{{ .Values.global.extraLabels | toYaml -}}
 {{- end -}}
 
 {{/*

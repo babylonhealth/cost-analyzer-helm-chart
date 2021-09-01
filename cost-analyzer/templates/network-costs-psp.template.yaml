@@ -5,7 +5,8 @@
 apiVersion: {{ include "cost-analyzer.podSecurityPolicy.apiVersion" . }}
 kind: PodSecurityPolicy
 metadata:
-    name: kubecost-network-costs
+  name: kubecost-network-costs
+  namespace: {{ .Release.Namespace }}
 spec:
     privileged: true
     hostNetwork: true
